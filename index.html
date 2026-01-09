@@ -10,12 +10,7 @@
 }
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-           background: linear-gradient(135deg, 
-    #1e150a 0%,    /* Теплий темно-каштановий */
-    #352417 45%,   /* Золотава бронза */
-    #120a05 75%,   /* Насичений чорно-коричневий */
-    #050302 100%   /* Чорний з теплим підтоном */
-);
+           background: linear-gradient(135deg, #1e150a 0%, #352417 45%, #120a05 75%, #050302 100%);
             background-attachment: fixed;
             background-repeat: no-repeat;
             background-size: cover;
@@ -97,25 +92,24 @@
     padding: 15px;  /* Зменшено для компактності */
     background: rgba(102, 126, 234, 0.1);
     border-radius: 15px;
-    position: absolute;  /* Ключове: виводимо з потоку */
-    top: 20px;           /* Відстань зверху */
-    right: 20px;         /* Відстань справа */
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);  /* Тінь для "піднесення" */
-    min-width: 100px;    /* Фіксована ширина */
+    position: absolute;
+    top: 20px;        
+    right: 20px;   
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);  
+    min-width: 100px; 
 }
         #weather-temp {
     font-size: 2.5em;
     font-weight: bold;
     margin: 0;
-    color: white;      /* Білий колір */
-    font-style: normal; /* Прибираємо курсив */
-    text-shadow: 0 1px 2px rgba(0,0,0,0.3); /* Тінь для читабельності */
+    color: white;     
+    font-style: normal; 
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
 }
 
 .loading {
-    color: rgba(255,255,255,0.8); /* Білий для завантаження */
-    font-style: normal;           /* Без курсиву */
-    font-style: italic;           /* Видаліть цей рядок повністю */
+    color: rgba(255,255,255,0.8);
+    font-style: normal;
 }
         
         .sections-row {
@@ -172,17 +166,17 @@
             <a href="https://ukr.radio/channel.html?channelID=1&progID=558&sliderIndex=43&regID=6/" class="link">Radio</a>
             <a href="https://www.youtube.com/" class="link">Video</a>
             <a href="https://www.pravda.com.ua/" class="link">News</a>
-            <a href="https://docs.google.com/spreadsheets/" class="link">Spreadsheets</a>
+            <a href="https://music.youtube.com/" class="link">Music</a>
         </div>
     </div>
     
      <div class="section">
         <h2>Sport</h2>
         <div class="links">
-            <a href="https://ukr.radio/channel.html?channelID=1&progID=558&sliderIndex=43&regID=6/" class="link">EuroLeague</a>
-            <a href="https://www.youtube.com/" class="link">Maincast</a>
-            <a href="https://www.pravda.com.ua/" class="link">Suspilne Sport</a>
-            <a href="https://docs.google.com/spreadsheets/" class="link">Setanta OTT</a>
+            <a href="https://euroleague.tv/home" class="link">EuroLeague</a>
+            <a href="https://www.maincast.tv/" class="link">Maincast</a>
+            <a href="https://suspilne.media/sport/schedule/tv/" class="link">Suspilne Sport</a>
+            <a href="https://app.setantasports.com/home/" class="link">Setanta OTT</a>
         </div>
     </div>
 </div>
@@ -190,7 +184,6 @@
     
         
     <script>
-        // Пошук DuckDuckGo
         const searchInput = document.getElementById('search-input');
         searchInput.addEventListener('keypress', function(e) {
             if (e.key === 'Enter') {
