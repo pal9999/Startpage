@@ -1,8 +1,13 @@
-document.addEventListener('DOMContentLoaded', function() {
+// Фокус + погода разом
+document.addEventListener('DOMContentLoaded', async function() {
     const searchInput = document.getElementById('search-input');
     searchInput.focus();
+    
+    // Викликаємо погоду одразу
+    await updateWeather();
 });
 
+// Пошук
 searchInput.addEventListener('keypress', function(e) {
     if (e.key === 'Enter') {
         const query = encodeURIComponent(this.value);
@@ -22,9 +27,10 @@ async function updateWeather() {
         document.getElementById('weather-temp').textContent = `${temp}°C`;
         document.getElementById('weather-time').textContent = '';
     } catch (error) {
+        console.error('Погода помилка:', error);  // Для дебагу
         document.getElementById('weather-temp').textContent = 'Помилка';
     }
 }
 
-updateWeather();
-setInterval(updateWeather, 3600000); // Оновлювати щогодини
+// Оновлення кожну годину
+setInterval(updateWeather, 3600000);
